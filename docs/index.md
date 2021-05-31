@@ -1,3 +1,3 @@
 ## Welcome to Heck
 
-[Best Game Ever](BestGame/index.html)
+[Best Game Ever](BestGame)
