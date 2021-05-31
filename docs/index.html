@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | TheBestGame</title>
+  </head>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" width=1000 height=600 style="width: 1000px; height: 600px; background: url('Build/a38221fd2b78995167d29af861b08679.jpg') center / cover"></canvas>
+    <script src="Build/fd97f8b8879ecf85b0244f6888a1cdbf.js"></script>
+    <script>
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        // Mobile device style: fill the whole browser client area with the game canvas:
+        var meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+        document.getElementsByTagName('head')[0].appendChild(meta);
+      }
+
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/a8b8bfd9c53b4944b5d3ed92ba1d485d.data.gz",
+        frameworkUrl: "Build/1202fe7dbf22aa518d61fa11593bce78.js.gz",
+        codeUrl: "Build/5d5d7d825cb67aa252a72e6651c1456d.wasm.gz",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "MinoBrain",
+        productName: "TheBestGame",
+        productVersion: "42",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
+    </script>
+  </body>
+</html>
